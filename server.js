@@ -3,11 +3,12 @@ const sqlite3 = require('sqlite3').verbose();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const path = require('path');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
-
+app.use(cors()); 
 const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkey_change_in_production';
 
 // Persistent file-based SQLite database configuration
