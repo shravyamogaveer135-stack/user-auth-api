@@ -1,0 +1,27 @@
+### 1. Test Register User
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "username": "shravya",
+  "email": "shravya@example.com",
+  "password": "mypassword123"
+}
+
+### 2. Test User Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "shravya@example.com",
+  "password": "mypassword123"
+}
+
+### 3. Test Reset Password
+POST http://localhost:3000/auth/reset-password
+Content-Type: application/json
+
+{
+  "email": "shravya@example.com",
+  "newPassword": "newsecurepassword456"
+}
